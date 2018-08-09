@@ -1,0 +1,25 @@
+{
+  "name": "redis-async",
+  "version": "1.0.0",
+  "description": "Async lib for Redis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshenok/redis-async.git"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "author": "pshenOk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pshenok/redis-async/issues"
+  },
+  "homepage": "https://github.com/pshenok/redis-async#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
