@@ -1,6 +1,6 @@
 {
-  "name": "redis-async",
-  "version": "1.0.0",
+  "name": "redis-asynchronous",
+  "version": "1.0.1",
   "description": "Async lib for Redis.",
   "main": "index.js",
   "scripts": {
