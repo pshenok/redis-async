@@ -24,5 +24,6 @@ redis.set({key: 'foo', value: 'bar'}).then(async ()=> {
     } catch (error) {
         console.error(error);
     }
-});```
+});
+```
 
