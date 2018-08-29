@@ -46,6 +46,14 @@ module.exports = class AsyncRedis {
         });
     }
 
+    expireSetObject({ key, object, time }) {
+        return new Promise((resolve, reject) => {
+            object = JSON.stringify(object);
+            this._client.set(key, object, 'EX', time);
+            return resolve(true);
+        });
+    }
+
     expireSet({ key, value, time }) {
         return new Promise((resolve, reject) => {
             this._client.set(key, value, 'EX', time);
