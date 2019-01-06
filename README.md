@@ -33,6 +33,14 @@ redis.set({key: 'foo', value: 'bar'}).then(async ()=> {
 });
 ```
 
+Example expire set string: 
+
+```js
+redis.expireSet({ key: 'foo', value: 'bar', time: 60 }).then(console.log).catch(console.error); // return true || error
+```
+Time is indicated in seconds.
+
+
 Example set/get objects:
 
 ```js

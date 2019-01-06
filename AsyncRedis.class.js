@@ -15,8 +15,7 @@ module.exports = class AsyncRedis {
     get(key) {
         return new Promise((resolve, reject) => {
             this._client.get(key, (err, value) => {
-                if (err) return reject(err);
-                return resolve(value);
+                err ? reject(err) : resolve(value);
             })
         });
     }
@@ -106,9 +105,9 @@ module.exports = class AsyncRedis {
     del(key) {
         return new Promise((resolve, reject) => {
             this._client.del(key, (err, reply) => {
-                if (err) return reject(new Error(err));
+                if (err) return reject(err);
                 if (reply === 1) {
-                    return resolve();//console.log("Key was deleted");
+                    return resolve(true);//console.log("Key was deleted");
                 } else {
                     return reject();//console.log("Does't exists");
                 }
